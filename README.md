@@ -1,1 +1,1 @@
-### scripts for analyzing RNA-seq data
+### Scripts for analyzing RNA-seq data
