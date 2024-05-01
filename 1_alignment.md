@@ -22,4 +22,6 @@ nohup STAR --runThreadN 10 \
 ```
 ls *.bam | while read id; do htseq-count  -q -f bam -r name -s no $id \
 /data/ting/Annotation/Genes/genes.gtf > ${id%%.*}.count  & done
+
+paste *.count | awk '{printf $1 "\t";for(i=2;i<=NF;i+=2) printf $i"\t";printf $i"\n"}' > count_file
 ```
